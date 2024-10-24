@@ -1,0 +1,20 @@
+ssh amsterdam@155.210.135.56
+
+pwd 9eabc187
+
+ls (vedere dove sei e cosa c'e)
+
+cd ibsen (entrare nella cartella di ibsen)
+
+cd oTree (entrare nella cartella di oTree)
+
+To upload to server:
+
+scp -r climate_sara oxford@155.210.135.56:/home/oxford/ibsen/oTree/. (ti chiederà la password)
+
+scp -r settings.py oxford@155.210.135.56:/home/oxford/ibsen/oTree/. (ti chiederà la password)
+
+To download from server:
+
+scp -r oxford@155.210.135.56:/home/oxford/ibsen/oTree/settings.py /Users/Sara's path
+
