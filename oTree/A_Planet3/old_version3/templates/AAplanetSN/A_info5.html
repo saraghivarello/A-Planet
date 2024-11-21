@@ -1,0 +1,87 @@
+{% extends "AAplanetSN/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+¿En qué medida confía usted personalmente en las siguientes instituciones del 1 al 7, donde 1 significa "No confío en absoluto" y 7 "Confío plenamente"?  
+
+<br><br>
+
+{% formfield player.trust_parlament %}
+
+{% formfield player.trust_municipality %}
+
+{% formfield player.trust_county %}
+
+{% formfield player.trust_government %}
+
+{% formfield player.trust_politicians %}
+
+{% formfield player.trust_parties %}
+
+<br><br>
+
+{% formfield player.vote %}
+
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %}
+
+How much do you personally trust the following institutions from 1 to 7, where 1 means ‘No trust at all’ and 7 means ‘Trust completely’?  
+
+<br><br>
+
+{% formfield player.trust_parlament %}
+
+{% formfield player.trust_municipality %}
+
+{% formfield player.trust_county %}
+
+{% formfield player.trust_government %}
+
+{% formfield player.trust_politicians %}
+
+{% formfield player.trust_parties %}
+
+<br><br>
+
+{% formfield player.vote %}
+
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+

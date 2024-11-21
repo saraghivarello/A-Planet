@@ -1,0 +1,92 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+<br><br>
+
+5 treatment
+
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+5 treatment
+ 
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

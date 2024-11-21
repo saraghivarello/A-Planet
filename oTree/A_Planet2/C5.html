@@ -1,0 +1,91 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+El gobierno necesita ingresos para financiar los servicios públicos. La introducción de la tarificación de las carreteras dará lugar a unos ingresos públicos superiores a los que proporcionan actualmente los impuestos sobre los carburantes y los peajes. Este dinero adicional puede destinarse a un fin específico o entrar en el presupuesto general.
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "public.png" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+Si los ingresos fiscales procedentes de la tarificación de las carreteras se asignan al presupuesto general, el gobierno utilizará el dinero recaudado para los servicios públicos en función de las prioridades del país. Por ejemplo, mejorará los servicios sociales como la educación, la atención a los niños, los ancianos y la sanidad.
+
+<br>
+<br>
+
+Otra posibilidad es que los ingresos fiscales se destinen a sufragar los costes de mantenimiento de las carreteras y a mejorar las infraestructuras viarias. O bien, estos ingresos fiscales pueden utilizarse para mejorar la infraestructura del transporte público, la bicicleta y los desplazamientos a pie y para aumentar la calidad, la frecuencia y la cobertura del transporte público. Esta política mejorará la experiencia de viaje de los ciudadanos y su bienestar. 
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+The government needs revenue to fund public services. The introduction of road pricing will result in higher public revenues than fuel taxes and road tolls give today. This additional money can be allocated to a specific purpose or enter the general budget.
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "public.png" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+If the tax revenue from road pricing is allocated to the general budget, the government will use the collected money for public services based on country priorities. For example, it will improve social services like education, childcare, elderly care and healthcare.
+
+<br>
+<br>
+
+Alternatively, the tax revenues can be destined to address the costs of road maintenance and to improve road infrastructure. Or these tax revenues can be used to improve infrastructure for public transport, cycling and walking and to increase the quality, frequency and the coverage of public transport. This policy will improve citizen travel experience and wellbeing. 
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

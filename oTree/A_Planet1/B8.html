@@ -1,0 +1,95 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 1 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 1 {% endif %}
+
+{% if language == "EN" %} Section 1 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "EN" %}
+
+These five diagrams show different types of society according to their wealth distribution.
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "income_distributionEN.png" %} width="80%" class="center"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+<br>
+
+Please read the descriptions below each diagram and decide which you think best describe Spain.
+
+<br><br>
+
+{% formfield player.inequality_perception %}
+
+
+{% formfield player.inequality_wish %}
+
+
+{% formfield player.income_distribution %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "ES" %}
+
+Estos cinco diagramas muestran diferentes tipos de sociedad según su distribución de la riqueza.
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "income_distribution1.png" %} width="80%" class="center"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+<br>
+
+Lea las descripciones que aparecen debajo de cada diagrama y decida cuál cree que describe mejor a España.
+
+<br><br>
+
+{% formfield player.inequality_perception %}
+
+
+{% formfield player.inequality_wish %}
+
+{% formfield player.income_distribution %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% endblock %}

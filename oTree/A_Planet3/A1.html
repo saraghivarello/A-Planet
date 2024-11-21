@@ -1,0 +1,167 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+En esta encuesta le hemos pedido que nos informe de su principal viaje diario.
+
+<br><br>
+
+Ha dicho que el destino/objetivo de su viaje típico es: <strong>{{trip_purpose}}</strong>
+
+<br><br>
+
+Ha informado de que utiliza principalmente el siguiente modo de transporte: <strong>{{trip_mode}}</strong>
+
+<br><br>
+
+Consideremos ahora los siguientes grupos de modos de transporte:
+
+<br><br>
+
+{% if SN_car_A %}
+
+<table style="display: inline-block" border = "1" width="50%" class="table table-bordered">
+  <tr>
+    <th width="33%">Opciones</th>
+    <th width="33%">Tipo</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Conducir un vehículo privado (coche, moto)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Transporte público (autobús, metro, tranvía, tren, transbordador) y transporte activo (bicicleta y caminar)</th>
+  </tr>
+</table>
+
+{% else %}
+
+<table style="display: inline-block" border = "1" width="50%" class="table table-bordered">
+  <tr>
+    <th width="33%">Opciones</th>
+    <th width="33%">Tipo</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Transporte público (autobús, metro, tranvía, tren, transbordador) y transporte activo (bicicleta y caminar)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Conducir un vehículo privado (coche, moto)</th>
+  </tr>
+</table>
+
+{% endif %}
+
+<br><br>
+
+{% formfield player.EE %}
+
+{% formfield player.PNB %}
+
+{% formfield player.NE %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %}
+
+In this survey we asked people to report their main daily commuting trip.
+
+<br><br>
+
+You said that the destination/purpose of your typical trip is: <strong>{{trip_purpose}}</strong>
+
+<br><br>
+
+You reported that you mostly use the following transport mode: <strong>{{trip_mode}}</strong>
+
+<br><br>
+
+Now consider the following transport mode groups:
+
+<br><br>
+
+{% if SN_car_A %}
+
+<table style="display: inline-block" border = "1" width="50%" class="table table-bordered">
+  <tr>
+    <th width="33%">Options</th>
+    <th width="33%">Type</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Driving private vehicle (Car, motorbike)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Public Transport (Bus, Metro, Tram, Train, Ferry) and active transport (cycling and walking)</th>
+  </tr>
+</table>
+
+{% else %}
+
+<table style="display: inline-block" border = "1" width="50%" class="table table-bordered">
+  <tr>
+    <th width="33%">Options</th>
+    <th width="33%">Type</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Public Transport (Bus, Metro, Tram, Train, Ferry) and active transport (cycling and walking)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Driving private vehicle (Car, motorbike)</th>
+  </tr>
+</table>
+
+{% endif %}
+
+<br><br>
+
+{% formfield player.EE %}
+
+{% formfield player.PNB %}
+
+{% formfield player.NE %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+

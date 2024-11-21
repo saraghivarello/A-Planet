@@ -1,0 +1,155 @@
+{% extends "AAplanetSN/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+{% if access_to_car == False %}
+
+Aunque haya contestado que no tiene acceso a un coche, imagine que lo tiene para sus desplazamientos diarios.
+
+<br><br>
+
+{% endif %}
+
+{% if SN_car_A %}
+
+<table style="display: inline-block" border = "1" width="50%">
+  <tr>
+    <th width="33%">Opciones</th>
+    <th width="33%">Tipo</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Conducir un vehículo privado (coche, moto)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Transporte público (autobús, metro, tranvía, tren, transbordador) y transporte activo (bicicleta y paseo)</th>
+  </tr>
+</table>
+
+{% else %}
+
+<table style="display: inline-block" border = "1" width="50%">
+  <tr>
+    <th width="33%">Opciones</th>
+    <th width="33%">Tipo</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Transporte público (autobús, metro, tranvía, tren, transbordador) y transporte activo (bicicleta y paseo)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Conducir un vehículo privado (coche, moto)</th>
+  </tr>
+</table>
+
+{% endif %}
+
+<br><br>
+
+{% formfield player.HH %}
+
+{% formfield player.HL %}
+
+{% formfield player.LH %}
+
+{% formfield player.LL %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %}
+
+{% if access_to_car == False %}
+
+Although you answered that you do not have access to a car, imagine instead that you have it for your daily commuting trip.
+
+<br><br>
+
+{% endif %}
+
+{% if SN_car_A %}
+
+<table style="display: inline-block" border = "1" width="50%">
+  <tr>
+    <th width="33%">Options</th>
+    <th width="33%">Type</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Driving private vehicle (Car, motorbike)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Public Transport (Bus, Metro, Tram, Train, Ferry) and active transport (cycling and walking)</th>
+  </tr>
+</table>
+
+{% else %}
+
+<table style="display: inline-block" border = "1" width="50%">
+  <tr>
+    <th width="33%">Options</th>
+    <th width="33%">Type</th>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%">Public Transport (Bus, Metro, Tram, Train, Ferry) and active transport (cycling and walking)</th>
+  </tr>
+  </tr>
+    <tr>
+    <th width="33%" style = "text-align:center">B</th>
+    <th width="33%">Driving private vehicle (Car, motorbike)</th>
+  </tr>
+</table>
+
+{% endif %}
+
+<br><br>
+
+{% formfield player.HH %}
+
+{% formfield player.HL %}
+
+{% formfield player.LH %}
+
+{% formfield player.LL %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+

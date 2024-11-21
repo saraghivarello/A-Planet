@@ -1,0 +1,123 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+Supongamos que están en vigor los siguientes precios:
+
+<br><br>
+
+<center>
+<table border = "1" width="66%"  class="table table-bordered">
+  <tr>
+    <td width="25%"></td>
+    <th width="25%" style = "text-align:center">Precio por kilómetro</th>
+  </tr>
+    <tr>
+    <td width="25%">Zonas urbanas, <i>hora punta</i></td>
+    <th width="25%" style = "text-align:center">0.30 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">Zonas urbanas, <i>fuera de la hora punta</i></td>
+    <th width="25%" style = "text-align:center">0.15 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">No en zonas urbanas</td>
+    <th width="25%" style = "text-align:center">0.02 EUR</th>
+  </tr>
+  <tr>
+    <td width="25%">Vehículos eléctricos</td>
+    <th width="25%" style = "text-align:center">50 por ciento de descuento</th>
+  </tr>
+</table>
+</center>
+
+<br>
+
+Supongamos que conduce 10 kilómetros con un coche diésel en hora punta en una zona urbana.
+
+<br><br>
+
+{% formfield player.control_question %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+Assume that the following prices are at place:
+
+<br><br>
+
+<center>
+<table border = "1" width="66%" class="table table-bordered">
+  <tr>
+    <td width="25%"></td>
+    <th width="25%" style = "text-align:center">Price per km</th>
+  </tr>
+    <tr>
+    <td width="25%">Urban areas, <i>rush hour</i></td>
+    <th width="25%" style = "text-align:center"> 0.30 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">Urban areas, <i>outside rush hour</i></td>
+    <th width="25%" style = "text-align:center">0.15 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">Not urban areas</td>
+    <th width="25%" style = "text-align:center">0.02 EUR</th>
+  </tr>
+  <tr>
+    <td width="25%">Electric vehicles</td>
+    <th width="25%" style = "text-align:center">50 percent of regular vehicles</th>
+  </tr>
+</table>
+</center>
+
+<br>
+
+Suppose that you drive 10 kilometers with a diesel car during rush hour in an urban area.
+
+<br><br>
+
+{% formfield player.control_question %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

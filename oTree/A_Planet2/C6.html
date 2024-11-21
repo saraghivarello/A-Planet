@@ -1,0 +1,101 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+<br><br>
+
+La tarificación vial suele considerarse una política más justa y equitativa que otras políticas que restringen los desplazamientos en coche. Esto se debe a que (1) se aplica a todo el mundo y (2) da a los conductores más libertad a la hora de adaptarse. 
+<br>
+En el caso de los peajes, algunos pueden evitarlos fácilmente, mientras que otros no. 
+En el caso de las zonas de bajas emisiones (Madrid centro), algunos conductores tendrán que hacer grandes cambios en sus desplazamientos, mientras que otros no, ya sea porque no viajan dentro de la zona de todos modos o porque tienen un coche al que se le permite entrar. 
+Con la tarificación vial, todos pueden seguir entrando en la zona, pero pagarán más si conducen más, sobre todo en hora punta. 
+
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+Road pricing is generally seen as a more just and fair policy than other policies that restrict car travel. This is because (1) it applies to everyone and (2) it gives drivers more freedom in how to adapt. 
+<br>
+In the case of road tolls, some can easily avoid the toll, while others cannot. 
+In the case of low-emission zones (Madrid central), some drivers will have to make big changes in their travel, while others do not, either because they do not travel inside the zone anyways or because they have a car which is permitted inside. 
+With road pricing, everyone can still enter the zone, but they will pay more if they drive more, particularly during rush hour. 
+
+ 
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

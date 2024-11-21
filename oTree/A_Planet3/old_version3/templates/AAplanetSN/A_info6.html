@@ -1,0 +1,83 @@
+{% extends "AAplanetSN/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+¿En qué medida está de acuerdo con las siguientes afirmaciones del 1 al 7, donde 1 significa "estoy totalmente en desacuerdo" y 7 "estoy totalmente de acuerdo"?
+
+<br><br>
+
+{% formfield player.air_pollution %}
+
+<br>
+
+{% formfield player.road_pricing %}
+
+<br>
+
+{% formfield player.revenues %}
+
+<br>
+
+{% formfield player.tax %}
+
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %}
+
+How much do you agree with the following statements from 1 to 7, where 1 means ‘I completely disagree’ and 7 means ‘I completely agree’?
+
+<br><br>
+
+{% formfield player.air_pollution %}
+
+<br>
+
+{% formfield player.road_pricing %}
+
+<br>
+
+{% formfield player.revenues %}
+
+<br>
+
+{% formfield player.tax %}
+
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,243 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 2 de 3. Elección {{subsession.round_number}} de {{C.NUM_ROUNDS}} {% endif %}
+
+{% if language == "NO" %} Seksjon 2. {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3. Choice {{subsession.round_number}} out of {{C.NUM_ROUNDS}} {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+En las siguientes preguntas, se le pedirá que elija entre distintos sistemas de tarificación vial con diferentes precios y uso de los ingresos. 
+
+<br><br>
+
+{% if treatment == 1 %}
+
+<p class="aligncenter">
+<img src={% static "traffic.png" %} height="40%" width="40%"/>
+</p>
+
+{% endif %}
+
+{% if treatment == 2 %}
+
+<p class="aligncenter">
+<img src={% static "public.png" %} height="40%" width="40%"/>
+</p>
+
+{% endif %}
+
+{% if treatment == 3 %}
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+{% endif %}
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+<br>
+
+<center>
+<table border = "1" width="100%"  class="table table-bordered">
+  <tr>
+    <th colspan="3" style = "text-align:center" width="50%">Considere las dos políticas siguientes</th>
+  </tr>
+  <tr>
+    <th width="33%"></th>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%" style = "text-align:center">B</th>
+  </tr>
+  <tr>
+    <td width="33%">Precio por kilómetro en zonas urbanas, <i>hora punta</i></td>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UR_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UR_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Precio por kilómetro en zonas urbanas, <i>fuera de la hora punta</i></td>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UN_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UN_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Precio por kilómetro fuera de las zonas urbanas</i></td>
+    <th width="33%" style = "text-align:center"><strong>{{Price_O_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Price_O_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Precio de los vehículos eléctricos</td>
+    <th width="33%" style = "text-align:center"><strong>{{EV_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{EV_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Uso de los ingresos</td>
+    <th width="33%" style = "text-align:center"><strong>{{Revenue_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Revenue_B}}</strong></th>
+  </tr>
+</table>
+</center>
+
+<br>
+
+<small>
+
+
+<ul>
+{% if show_revenue1 %}
+<li> <strong>Presupuesto general</strong>: El gobierno decidirá cómo utilizar los ingresos en función de sus prioridades.  </li> <br>
+{% endif %}
+{% if show_revenue2 %}
+<li> <strong>Transferencia igualitaria</strong>: Los ingresos se distribuirán por igual entre todos los ciudadanos.</li> <br>
+{% endif %}
+{% if show_revenue3 %}
+<li> <strong>Transferencia para los ciudadanos con bajos ingresos</strong>: Los ingresos se distribuirán entre los ciudadanos con bajos ingresos.</li> <br>
+{% endif %}
+{% if show_revenue4 %}
+<li> <strong>Inversiones en carreteras</strong>: Los ingresos se destinarán a inversiones y mantenimiento de carreteras. </li> <br>
+{% endif %}
+{% if show_revenue5 %}
+<li> <strong>Inversiones en transporte público, a pie y en bicicleta</strong>: Los ingresos se destinarán a inversiones y mejoras en infraestructuras y servicios de transporte público, a pie y en bicicleta. </li>
+{% endif %}
+</ul>
+
+</small>
+
+{% formfield player.policy_choice %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %}
+
+In the following questions, you will be asked to choose between different road pricing schemes with different prices and use of revenues. 
+
+<br><br>
+
+{% if treatment == 1 %}
+
+<p class="aligncenter">
+<img src={% static "traffic.png" %} height="40%" width="40%"/>
+</p>
+
+{% endif %}
+
+{% if treatment == 2 %}
+
+<p class="aligncenter">
+<img src={% static "public.png" %} height="40%" width="40%"/>
+</p>
+
+{% endif %}
+
+{% if treatment == 3 %}
+
+<p class="aligncenter">
+<img src={% static "road-pricing.jpg" %} height="40%" width="40%"/>
+</p>
+
+{% endif %}
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+<br>
+
+<center>
+<table border = "1" width="100%" class="table table-bordered">
+  <tr>
+    <th colspan="3" style = "text-align:center" width="50%">Evaluate the two following policies</th>
+  </tr>
+  <tr>
+    <th width="33%"></th>
+    <th width="33%" style = "text-align:center">A</th>
+    <th width="33%" style = "text-align:center">B</th>
+  </tr>
+  <tr>
+    <td width="33%">Price per km in urban areas, <i>rush hour</i></td>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UR_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UR_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Price per km in urban areas, <i>outside rush hour</i></td>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UN_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Price_UN_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Price per km outside urban areas</i></td>
+    <th width="33%" style = "text-align:center"><strong>{{Price_O_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Price_O_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Price for electric vehicles</td>
+    <th width="33%" style = "text-align:center"><strong>{{EV_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{EV_B}}</strong></th>
+  </tr>
+  <tr>
+    <td width="33%">Use of revenues</td>
+    <th width="33%" style = "text-align:center"><strong>{{Revenue_A}}</strong></th>
+    <th width="33%" style = "text-align:center"><strong>{{Revenue_B}}</strong></th>
+  </tr>
+</table>
+</center>
+
+<br>
+
+<small>
+
+<ul>
+{% if show_revenue1 %}
+<li> <strong>General budget</strong>: The government will decide how to use the revenue based on its priorities.  </li> <br>
+{% endif %}
+{% if show_revenue2 %}
+<li> <strong>Equal cash transfer</strong>: The revenue will be distributed equally among all citizens.</li> <br>
+{% endif %}
+{% if show_revenue3 %}
+<li> <strong>Cash transfer for low-income citizens</strong>: The revenue will be paid back to low-income citizens.</li> <br>
+{% endif %}
+{% if show_revenue4 %}
+<li> <strong>Investments in roads</strong>: The revenue will be used for road investments and maintenance. </li> <br>
+{% endif %}
+{% if show_revenue5 %}
+<li> <strong>Investments in public transport, walking and cycling</strong>: The revenue will be used for investments and improvements in public transport, walking and cycling infrastructure and services. </li>
+{% endif %}
+</ul>
+
+</small>
+
+{% formfield player.policy_choice %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}

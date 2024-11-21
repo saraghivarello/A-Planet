@@ -1,0 +1,160 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+El impuesto consiste en tres precios diferentes:  
+<ul>
+<li> un precio para las zonas urbanas en hora punta,</li>
+<li> un precio para las zonas urbanas fuera de las horas punta,</li>
+<li> un precio fuera de las zonas urbanas para todo el día.</li>
+</ul>
+
+Por zonas urbanas entendemos las situadas dentro de la M30.
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "M30.png" %} height="30%" width="30%"/>
+</p>
+
+
+Los conductores de vehículos eléctricos pueden pagar un precio diferente, entre el 0% y el 100% de la tarifa normal.  
+Incluidos los vehículos híbridos cuando utilizan el motor eléctrico.
+
+<br><br> 
+<h3>Ejemplo:</h3>
+
+Supongamos que están en vigor los siguientes precios:
+
+<br><br>
+
+<center>
+<table border = "1" width="66%"  class="table table-bordered">
+  <tr>
+    <td width="25%"></td>
+    <th width="25%" style = "text-align:center">Precio por kilómetro</th>
+  </tr>
+    <tr>
+    <td width="25%">Zonas urbanas, <i>hora punta</i></td>
+    <th width="25%" style = "text-align:center">0.30 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">Zonas urbanas, <i>fuera de la hora punta</i></td>
+    <th width="25%" style = "text-align:center">0.15 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">No en zonas urbanas</td>
+    <th width="25%" style = "text-align:center">0.02 EUR</th>
+  </tr>
+  <tr>
+    <td width="25%">Vehículos eléctricos</td>
+    <th width="25%" style = "text-align:center">50 por ciento de descuento</th>
+  </tr>
+</table>
+</center>
+
+<br>
+
+Así, si recorre 10 kilómetros con un coche diésel o de gasolina en hora punta y la mitad de este trayecto es dentro de una zona urbana, pagará 0.30 EUR/km x 5 km + 0.02 EUR/km x 5 km = 1.60 EUR. En cambio, si conduce un vehículo eléctrico pagará 0.80 EUR. 
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+The tax consists in three different prices:  
+<ul>
+<li> a price for urban areas during rush hour,</li>
+<li> a price for urban areas outside rush hour,</li>
+<li> a price outside urban areas for all day.</li>
+</ul>
+
+By urban areas, we mean areas inside the M30.  
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "M30.png" %} height="30%" width="30%"/>
+</p>
+
+Drivers of electric vehicles may pay a different price, between 0 and 100 percent of the normal rate. 
+Including hybrid vehicles when using the electrical engine. 
+<br><br> 
+
+<h3>Example:</h3>
+
+Assume that the following prices are at place:
+
+<br><br>
+
+<center>
+<table border = "1" width="66%" class="table table-bordered">
+  <tr>
+    <td width="25%"></td>
+    <th width="25%" style = "text-align:center">Price per km</th>
+  </tr>
+    <tr>
+    <td width="25%">Urban areas, <i>rush hour</i></td>
+    <th width="25%" style = "text-align:center">0.30 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">Urban areas, <i>outside rush hour</i></td>
+    <th width="25%" style = "text-align:center">0.15 EUR</th>
+  </tr>
+  </tr>
+    <tr>
+    <td width="25%">Not urban areas</td>
+    <th width="25%" style = "text-align:center">0.02 EUR</th>
+  </tr>
+  <tr>
+    <td width="25%">Electric vehicles</td>
+    <th width="25%" style = "text-align:center">50 percent of regular vehicles</th>
+  </tr>
+</table>
+</center>
+
+<br>
+
+Thus, if you drive 10 kilometers with a diesel or gasoline car during rush hour and half of this trip is inside an urban area, you will pay 0.30 EUR/km x 5 km + 0.02 EUR/km x 5 km = 1.60 EUR. Instead, if you drive an electric vehicle you will pay 0.80 EUR. 
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

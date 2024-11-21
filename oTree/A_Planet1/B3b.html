@@ -1,0 +1,35 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 1. Cuestionario {% endif %}
+
+{% if language == "NO" %} Seksjon 1. Spørreskjema {% endif %}
+
+{% if language == "EN" %} Section 1. Questionnaire {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% formfield player.access_to_motorbyke %}
+
+{% if language == "ES" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+
+{% endblock %}

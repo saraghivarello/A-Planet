@@ -1,0 +1,81 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+El dinero recaudado con el impuesto puede utilizarse de una de las siguientes maneras:
+
+<br><br>
+
+<ul>
+<li> <strong>Presupuesto general</strong>: El gobierno decidirá cómo utilizar los ingresos en función de sus prioridades.  </li> <br>
+<li> <strong>Transferencia igualitaria</strong>: Los ingresos se distribuirán por igual entre todos los ciudadanos.</li> <br>
+<li> <strong>Transferencia para los ciudadanos con bajos ingresos</strong>: Los ingresos se distribuirán entre los ciudadanos con bajos ingresos.</li> <br>
+<li> <strong>Inversiones en carreteras</strong>: Los ingresos se destinarán a inversiones y mantenimiento de carreteras. </li> <br>
+<li> <strong>Inversiones en transporte público, a pie y en bicicleta</strong>: Los ingresos se destinarán a inversiones y mejoras en infraestructuras y servicios de transporte público, a pie y en bicicleta. </li>
+</ul>
+
+<br>
+
+{% formfield player.alternative1 %}
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+The money raised from the tax can be used in one of the following ways:
+
+<br><br>
+
+<ul>
+<li> <strong>General budget</strong>: The government will decide how to use the revenue based on its priorities.  </li> <br>
+<li> <strong>Equal cash transfer</strong>: The revenue will be distributed equally among all citizens.</li> <br>
+<li> <strong>Cash transfer for low-income citizens</strong>: The revenue will be paid back to low-income citizens.</li> <br>
+<li> <strong>Investments in roads</strong>: The revenue will be used for road investments and maintenance. </li> <br>
+<li> <strong>Investments in public transport, walking and cycling</strong>: The revenue will be used for investments and improvements in public transport, walking and cycling infrastructure and services. </li>
+</ul>
+
+<br>
+
+{% formfield player.alternative1 %}
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

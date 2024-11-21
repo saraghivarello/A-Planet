@@ -1,0 +1,73 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+¿Ha tenido en cuenta estos atributos a la hora de elegir entre la política A y la B?
+
+<br><br>
+
+{% formfield player.attributes_binary_1 %}
+{% formfield player.attributes_binary_2 %}
+{% formfield player.attributes_binary_3 %}
+{% formfield player.attributes_binary_4 %}
+{% formfield player.attributes_binary_5 %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+Have you taken these attributes into account when choosing between policy A and B?
+
+<br><br>
+
+{% formfield player.attributes_binary_1 %}
+{% formfield player.attributes_binary_2 %}
+{% formfield player.attributes_binary_3 %}
+{% formfield player.attributes_binary_4 %}
+{% formfield player.attributes_binary_5 %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Norwegian text.
+
+<br><br>
+
+{% formfield player.attributes_binary_1 %}
+{% formfield player.attributes_binary_2 %}
+{% formfield player.attributes_binary_3 %}
+{% formfield player.attributes_binary_4 %}
+{% formfield player.attributes_binary_5 %}
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

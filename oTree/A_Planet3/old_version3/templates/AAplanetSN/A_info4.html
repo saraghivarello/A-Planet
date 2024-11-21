@@ -1,0 +1,71 @@
+{% extends "AAplanetSN/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+{% formfield player.year_born %}
+
+{% formfield player.gender %}
+
+{% formfield player.education %}
+
+{% formfield player.income %}
+
+{% formfield player.family %}
+
+{% formfield player.children %}
+
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %}
+
+{% formfield player.year_born %}
+
+{% formfield player.gender %}
+
+{% formfield player.education %}
+
+{% formfield player.income %}
+
+{% formfield player.family %}
+
+{% formfield player.children %}
+
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+

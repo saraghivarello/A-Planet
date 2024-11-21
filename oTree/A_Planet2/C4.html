@@ -1,0 +1,91 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+Según la Agencia Europea de Medio Ambiente (AEMA), la contaminación atmosférica es el mayor riesgo medioambiental para la salud en Europa. La contaminación es una de las principales causas de muerte prematura, de varias enfermedades y una de las principales causas de cáncer.
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "traffic.png" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+El fundamento de la tarificación vial es que la conducción de automóviles en zonas urbanas provoca más congestión y contaminación que la conducción fuera de las zonas urbanas. Por ello, la conducción debería ser más cara en las zonas urbanas, sobre todo en las horas punta. Los vehículos eléctricos contaminan menos que los de gasóleo y gasolina, pero contribuyen igualmente a la congestión y al desgaste de las carreteras.
+
+<br>
+<br>
+
+La introducción de la tarificación vial aumentará el coste de la conducción, lo que a su vez reducirá el tráfico, la congestión y la contaminación atmosférica. Así se ha comprobado en algunas ciudades que han aplicado políticas similares. Por ejemplo, en Londres, Milán y Estocolmo, el tráfico se redujo entre un 20% y un 30%, tras la implantación de una tasa por congestión.
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+According to the European Environment Agency (EEA) air pollution is the single largest environmental health risk in Europe. Pollution is a major cause of premature death, several diseases and a leading cause of cancer.
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "traffic.png" %} height="40%" width="40%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+The rationale behind road pricing is that car driving in urban areas causes more congestion and pollution than driving outside urban areas. Hence, driving should be more expensive in urban areas, particularly during rush hour. Electric vehicles pollute less than diesel and gasoline vehicles but contribute equally to congestion and road wear.
+
+<br>
+<br>
+
+The introduction of road pricing will increase the cost of driving, which in turn will reduce traffic, congestion and air pollution. This has been found in a few cities that have implemented similar policies. For instance, in London, Milan and Stockholm, traffic was reduced by between 20 and 30 percent, following the implementation of a congestion charge.
+
+<br><br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

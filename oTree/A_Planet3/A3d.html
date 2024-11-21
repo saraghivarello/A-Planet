@@ -1,0 +1,79 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language ==  "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+{% if access_to_car == False %}
+Aunque haya contestado que no tiene acceso a un coche, imagine que lo tiene para sus desplazamientos diarios.
+{% endif %}
+
+<br><br>
+
+{% formfield player.LL %}
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "LL.png" %} height="60%" width="60%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+
+
+{% if language == "EN" %}
+
+{% if access_to_car == False %}
+Although you answered that you do not have access to a car, imagine instead that you have it for your daily commuting trip.
+{% endif %}
+
+<br><br>
+
+{% formfield player.LL %}
+
+<br><br>
+
+<p class="aligncenter">
+<img src={% static "LL.png" %} height="60%" width="60%"/>
+</p>
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+
+

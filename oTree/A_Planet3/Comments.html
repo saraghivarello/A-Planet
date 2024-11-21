@@ -1,0 +1,44 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<p>
+<center> <img src={% static "ibsen_header.png" %} height="90%" width="90%"/> </center>
+</p>
+
+<br>
+
+Escriba aquí su cuenta de Paypal <strong>en forma de correo electronico</strong>: <br>
+{% formfield player.paypal_account %}
+
+Escriba aquí sus comentarios (cualquier comentario para mejorar el experimento será más que bienvenido): <br>
+{% formfield player.comments %}
+
+Si lo prefiere, puede enviar sus comentarios adicionales al correo de contacto: <em>ibsen.gisc@gmail.com</em>
+
+<br><br>
+
+<p>
+Recibirá su pago de 4 EUR en las siguientes 24 horas. Si le toca la lotería recibirá 100 EUR. Muchas gracias por participar.
+</p>
+
+<br>
+
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Fin.
+</button>
+
+
+{% endblock %}

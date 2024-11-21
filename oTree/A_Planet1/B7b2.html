@@ -1,0 +1,74 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 1 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 1 {% endif %}
+
+{% if language == "EN" %} Section 1 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "EN" %}
+
+In the next questions, please consider a one-way trip from your point of departure to your destination.
+<br><br>
+
+{% endif %}
+
+{% if language == "NO" %}
+
+In the next questions, please consider a one-way trip from your point of departure to your destination.
+<br><br>
+
+{% endif %}
+
+
+{% if language == "ES" %}
+
+En las siguientes preguntas, considere el viaje que ha mencionado en la pregunta anterior desde su casa hasta su destino.
+<br><br>
+
+{% endif %}
+
+
+{% formfield player.trip_traffic %}
+
+{% formfield player.trip_time %}
+
+{% formfield player.trip_cost %}
+
+{% formfield player.trip_tolls %}
+
+
+
+{% if language == "ES" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+
+{% endblock %}

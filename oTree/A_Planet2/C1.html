@@ -1,0 +1,96 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} Sección 2 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 2 {% endif %}
+
+{% if language == "EN" %} Section 2 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "ES" %} 
+
+<strong>Los resultados de este estudio se utilizarán en la investigación sobre el transporte que informará a los responsables políticos y podría tener un impacto en la futura política fiscal.</strong>
+
+<br>
+<br>
+
+Imaginemos que el gobierno introduce un sistema de pago por uso de carreteras que llamaremos tarificación vial para los conductores de automóviles.
+
+<br>
+<br>
+
+<i>Por tarificación vial se entiende un impuesto sobre el kilómetro conducido que varía en el tiempo y el espacio. El impuesto es más alto en los lugares donde la conducción causa más problemas, por ejemplo en las zonas densamente pobladas durante las horas punta. </i>
+
+<br>
+<br>
+
+La tarificación vial sustituiría a los actuales peajes, impuestos sobre el combustible y Madrid central. 
+
+<br>
+<br>
+
+Imagine también que los vehículos contaran con un dispositivo homologado que calcule el impuesto y comunique esta cifra a las autoridades. La privacidad se respetaría completamente y no se compartiría ninguna información sobre su conducción, sólo el total de impuestos a pagar.
+
+<br>
+<br>
+
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<strong>The results of this study will be used in transport research that will inform policy-makers and might have an impact on future tax policy.</strong>
+
+<br>
+<br>
+
+Imagine that the government introduces a road pricing scheme for car drivers.
+
+<br>
+<br>
+
+<i>By road pricing, we mean a tax on kilometer driven that varies over time and space. The tax is higher in places where driving causes most problems, for example in densely populated areas during rush hour. </i>
+
+<br>
+<br>
+
+Road pricing would replace the current tolls, taxes on fuel and Madrid central. 
+
+<br>
+<br>
+
+Imagine also that vehicles will contain an approved device that calculates the tax and communicate this number to the authorities. Privacy will be completely respected. No information about your driving is shared, only the total tax to be paid.
+
+<br>
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Norwegian text.
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+

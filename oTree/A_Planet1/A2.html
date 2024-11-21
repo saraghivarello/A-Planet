@@ -1,0 +1,81 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %} 
+
+{% if language == "ES" %} ¡Bienvenido! {% endif %}
+
+{% if language == "EN" %} Welcome! {% endif %}
+
+{% if language == "NO" %} Velkommen! {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
+{% if language == "ES" %} 
+
+<br>
+
+<h3> El experimento finalizará a las <strong>{{ C.start_time }}
+(hora de Madrid) del día {{ C.start_date }}</strong>.</h3>
+
+<h3><strong>Importante</strong>: Recuerde que durante todo el experimento una vez que haga clic en "Siguiente" no podrá volver atrás.</h3>
+
+<h3>Puede acceder al experimento utilizando siempre el mismo enlace que le hemos enviado.</h3>
+
+<br>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<br>
+
+<h3>The survey begins at {{ C.start_time }} (CET) of {{ C.start_date }}.</h3>
+
+<h3><strong>Important</strong>: Remember that during the whole experiment once you click on "Next" you cannot go back.
+
+<h3>You can always access the experiment using the same link we have sent you.</h3>
+
+<br>    
+    
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+<br>
+
+<h3>Vær så snill, espere mientras el resto de participantes se conecta.
+Desde las {{ C.start_time }} (hora de Madrid), tendrá 15 minutos
+para leer las instrucciones del experimento.</h3>
+
+<h3> El experimento empezará a las <strong>{{ C.start_time_1 }}
+(hora de Madrid)</strong>. </h3>
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,43 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 1 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 1 {% endif %}
+
+{% if language == "EN" %} Section 1 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% formfield player.buy_car_type %}
+
+{% if language == "ES" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+
+{% endblock %}

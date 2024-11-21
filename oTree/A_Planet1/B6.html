@@ -1,0 +1,72 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 1 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 1 {% endif %}
+
+{% if language == "EN" %} Section 1 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if language == "EN" %} 
+
+Please consider a trip that you make on a daily or regular basis to a location outside of your home. This could for instance be a trip to work, to an education institution or to a frequent activity. Please choose a trip that lasts at least 10 min (one way).
+
+<br>
+<br>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+Please consider a trip that you make on a daily or regular basis to a location outside of your home. This could for instance be a trip to work, to an education institution or to a frequent activity. Please choose a trip that lasts at least 10 min (one way).
+
+<br>
+<br>
+
+{% endif %}
+
+{% if language == "ES" %} 
+
+Piense en un viaje que haga a diario o con regularidad a un lugar fuera de su casa. Puede ser, por ejemplo, un viaje al trabajo, a un centro educativo o a una actividad frecuente. Elija un viaje que dure al menos 10 minutos (solo ida).
+
+<br>
+<br>
+
+{% endif %}
+
+{% formfield player.municipality_destination %}
+
+{% formfield player.trip_purpose %}
+
+{% if language == "ES" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Siguiente
+</button>
+
+{% endif %}
+
+{% if language == "NO" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+{% if language == "EN" %} 
+
+<button style="background-color: #008CBA; font-size: 20px; color: white; border-radius: 12px;">
+    Next
+</button>
+
+{% endif %}
+
+
+{% endblock %}

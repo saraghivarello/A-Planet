@@ -1,0 +1,44 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+{% if language == "ES" %} Sección 3 de 3 {% endif %}
+
+{% if language == "NO" %} Seksjon 3 {% endif %}
+
+{% if language == "EN" %} Section 3 out of 3 {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<p>
+<center> <img src={% static "ibsen_header.png" %} height="90%" width="90%"/> </center>
+</p>
+
+<br>
+
+{% if language == "ES" %}
+
+Muchas gracias por participar.
+
+Recibirá su pago de 4 EUR en las siguientes 24 horas su la cuenta de Paypal : <br> {{player.paypal_account}}. 
+
+Si le toca la lotería recibirá 100 EUR.
+
+{% endif %}
+
+
+{% if language == "EN" %}
+
+Thank you very much for participating.
+
+You will receive your payment of 4 EUR within 24 hours on your Paypal account :  <br> {{player.paypal_account}}.
+
+If you win the lottery you will receive 100 EUR.
+
+{% endif %}
+
+
+{% endblock %}
